@@ -30,7 +30,7 @@ I used [yt-dlp](https://github.com/yt-dlp/yt-dlp) for reducing the download size
 
 Firstly, I converted the videos to audios in Jupyter Notebook with windows explorer (Since the size of the videos was large while uploading in gdrive). Then uploaded the audios in a google drive for accessing it in Colab. 
 
-We then create a bash script for preprocessing the audio files (make sure that the bash script is executable and converted into unix format). The script takes the audio files, preprocessing is applied and converted into wav format. Finally, all the preprocessed audio files is saved.
+We then create a bash script for preprocessing the audio files (make sure that the bash script is executable and converted into unix format). The bash script converts the audio files to WAV format with 16KHz sampling rate and mono channel format. The script takes the audio files, preprocessing is applied and converted into wav format. Finally, all the preprocessed audio files is saved.
 
 ### Transcripts
 
