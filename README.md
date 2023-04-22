@@ -52,7 +52,7 @@ The JSON lines file looks like this!
 <a name="viz"></a>
 ## Visualization
 
-I created a rough dashboard in Grafana for insights.
+I created a rough dashboard in Grafana for better visualization.
 
 
 ![Image Dashboard](https://user-images.githubusercontent.com/89388819/233783726-475b0d29-7ed1-41b4-9a72-96097efe097a.jpg)
