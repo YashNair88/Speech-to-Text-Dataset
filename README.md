@@ -7,8 +7,8 @@ A Speech-to-Text dataset scraped from [NPTEL](https://nptel.ac.in/courses/106106
 1. [ Aim ](#aim)
 2. [ Data ](#data)
 3. [ Preprocessing ](#pre)
-4. [ Visualization ](#viz)
-5. [ Training Manifest File ](#tra)
+4. [ Training Manifest File ](#tra)
+5. [ Visualization ](#viz)
 
 
 <a name="aim"></a>
@@ -19,7 +19,7 @@ To create a data engineering pipeline for curating a Speech-To-Text dataset from
 <a name="data"></a>
 ## Data
 
-Collecting audio data is the initial stage in generating a speech recognition dataset. I used the NPTEL lectures available for this task. The lectures are available in various media, including audio and video, and NPTEL offers a substantial number of lectures on various topics. We can download the lecture audio recordings and save them in a central data storage platform.
+Collecting audio data is the initial stage in generating a speech recognition dataset. I used the NPTEL lectures available for this task. The lectures are available in various media, including audio and video, and NPTEL offers a substantial number of lectures on various topics. We can download the lecture audio recordings and save them in a central data storage platform.
 
 I used [yt-dlp](https://github.com/yt-dlp/yt-dlp) for reducing the download size/time of the videos. The transcripts were directly downloaded from the [NPTEL](https://nptel.ac.in/courses/106106184) website. 
 
@@ -28,13 +28,13 @@ I used [yt-dlp](https://github.com/yt-dlp/yt-dlp) for reducing the download size
 
 ### Audio
 
-Firstly, I converted the videos to audios in Jupyter Notebook with windows explorer (Since the size of the videos was large while uploading in gdrive). Then uploaded the audios in a google drive for accessing it in Colab. 
+Firstly, I converted the videos to audio in Jupyter Notebook with windows explorer (Since the size of the videos was large while uploading in Drive). Then uploaded the audio to a google drive for accessing it in Colab. 
 
-We then create a bash script for preprocessing the audio files (make sure that the bash script is executable and converted into unix format). The bash script converts the audio files to WAV format with 16KHz sampling rate and mono channel format. The script takes the audio files, preprocessing is applied and converted into wav format. Finally, all the preprocessed audio files is saved.
+We then create a bash script for preprocessing the audio files (make sure that the bash script is executable and converted into Unix format). The bash script converts the audio files to WAV format with a 16KHz sampling rate and mono-channel format. The script takes the audio files, then the preprocessing is applied and converted into wav format. Finally, all the preprocessed audio files are saved.
 
 ### Transcripts
 
-The transcripts are also uploaded into the google drive for accessing it in colab. The transcripts can also be imported from the NPTEL Website directly using a Python Script. I chose this way of accessing the transcripts.
+The transcripts are also uploaded into google drive for access in Colab. The transcripts can also be imported from the NPTEL Website directly using a Python Script. I chose this way of accessing the transcripts.
 
 First, we extract the transcript from all the PDF files in the transcripts folder and save the transcript in a text file. We then create a list of all the PDF files in the folder. Then, I extracted all the texts from the pdf files. We pre-process the text data by converting it to lowercase, removing punctuations, and converting all digits to their spoken form.
 
